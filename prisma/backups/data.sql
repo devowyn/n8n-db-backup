@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict aTWJ5ZWXfnwa7m0sg677lb2eQGPev7mOrKUonEnmCdfTnutThVapFYzRe9aKNb4
+-- \restrict WvUeG1e1emdkDYUbYvteqbdZ300gxBSmW3S5qDLCViroX6HZZWh1OIedj0WHUbI
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -225,7 +225,7 @@ secretsProviderConnection:user	Secrets Provider Connection User	Read-only access
 --
 
 COPY "public"."user" ("id", "email", "firstName", "lastName", "password", "personalizationAnswers", "createdAt", "updatedAt", "settings", "disabled", "mfaEnabled", "mfaSecret", "mfaRecoveryCodes", "lastActiveAt", "roleSlug") FROM stdin;
-df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-12 08:52:47.499+00	{"userActivated": false}	f	f	\N	\N	2026-05-12	global:owner
+df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-14 09:26:58.365+00	{"userActivated": false}	f	f	\N	\N	2026-05-14	global:owner
 \.
 
 
@@ -576,6 +576,7 @@ COPY "public"."instance_ai_workflow_snapshots" ("runId", "workflowName", "resour
 
 COPY "public"."instance_version_history" ("id", "major", "minor", "patch", "createdAt") FROM stdin;
 1	2	20	6	2026-05-12 08:42:19.442+00
+2	2	20	7	2026-05-14 09:25:54.275+00
 \.
 
 
@@ -1820,7 +1821,7 @@ SELECT pg_catalog.setval('"public"."insights_raw_id_seq"', 1, false);
 -- Name: instance_version_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."instance_version_history_id_seq"', 1, true);
+SELECT pg_catalog.setval('"public"."instance_version_history_id_seq"', 2, true);
 
 
 --
@@ -1876,6 +1877,6 @@ SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 1, false);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict aTWJ5ZWXfnwa7m0sg677lb2eQGPev7mOrKUonEnmCdfTnutThVapFYzRe9aKNb4
+-- \unrestrict WvUeG1e1emdkDYUbYvteqbdZ300gxBSmW3S5qDLCViroX6HZZWh1OIedj0WHUbI
 
 RESET ALL;
