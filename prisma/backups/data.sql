@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict Ko8NWCscn7GCyIQZTlIgTRxE6HLBo1MVpFVLvADz4t2rpx9pKmx2qgoBu3eN3wH
+-- \restrict U0IyAKbnBf7oWieVhcbqZtsHs9jAHGbk0XfxklZijT4UWk0OZoE5itAt0g5hesQ
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -225,7 +225,7 @@ secretsProviderConnection:user	Secrets Provider Connection User	Read-only access
 --
 
 COPY "public"."user" ("id", "email", "firstName", "lastName", "password", "personalizationAnswers", "createdAt", "updatedAt", "settings", "disabled", "mfaEnabled", "mfaSecret", "mfaRecoveryCodes", "lastActiveAt", "roleSlug") FROM stdin;
-df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-14 09:26:58.365+00	{"userActivated": false}	f	f	\N	\N	2026-05-14	global:owner
+df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-16 17:53:34.199+00	{"userActivated": false}	f	f	\N	\N	2026-05-16	global:owner
 \.
 
 
@@ -259,6 +259,7 @@ COPY "public"."instance_ai_threads" ("id", "resourceId", "title", "metadata", "c
 --
 
 COPY "public"."workflow_entity" ("name", "active", "nodes", "connections", "createdAt", "updatedAt", "settings", "staticData", "pinData", "versionId", "triggerCount", "id", "meta", "parentFolderId", "isArchived", "versionCounter", "description", "activeVersionId") FROM stdin;
+My workflow	f	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"base":{"__rl":true,"value":"appse5c8JbGJUJzeq","mode":"list","cachedResultName":"AI Project Tracker","cachedResultUrl":"https://airtable.com/appse5c8JbGJUJzeq"},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get a record","type":"main","index":0}]]}}	2026-05-16 14:14:08.853+00	2026-05-16 15:19:25.636+00	{"executionOrder":"v1","binaryMode":"separate"}	\N	{}	c1aa9a37-dadb-47ac-baa1-59f61fd39136	0	hOleLeVUsZQxdi9B	{"templateCredsSetupCompleted":true}	\N	f	16	\N	\N
 \.
 
 
@@ -315,6 +316,7 @@ COPY "public"."dynamic_credential_resolver" ("id", "name", "type", "config", "cr
 --
 
 COPY "public"."credentials_entity" ("name", "data", "type", "createdAt", "updatedAt", "id", "isManaged", "isGlobal", "isResolvable", "resolvableAllowFallback", "resolverId") FROM stdin;
+Airtable Personal Access Token account	U2FsdGVkX18YSoQszMQVRYv3Gwn3kZpc+SMv5BdYh6MTnXWAZKLz2L1kAMh/vyTHDsGEdEx7u9mc9sejY4/H8BXk7Hjyhs9rfhhdN+dsm/SKa9y6JOoYpE3ykri2bTH06kOCPJ6BK2hWt4PoGqRuw3gDsReepYrKBqploM0QDfI=	airtableTokenApi	2026-05-16 14:48:31.007+00	2026-05-16 14:48:30.712+00	DIbHcKc43tjLc7zV	f	f	f	f	\N
 \.
 
 
@@ -355,6 +357,8 @@ COPY "public"."chat_hub_sessions" ("id", "title", "ownerId", "lastMessageAt", "c
 --
 
 COPY "public"."execution_entity" ("id", "finished", "mode", "retryOf", "retrySuccessId", "startedAt", "stoppedAt", "waitTill", "status", "workflowId", "deletedAt", "createdAt", "storedAt", "tracingContext", "deduplicationKey") FROM stdin;
+1	t	manual	\N	\N	2026-05-16 14:14:27.049+00	2026-05-16 14:14:39.501+00	\N	success	hOleLeVUsZQxdi9B	\N	2026-05-16 14:14:23.842+00	db	\N	\N
+2	t	manual	\N	\N	2026-05-16 14:17:21.359+00	2026-05-16 14:17:23.49+00	\N	success	hOleLeVUsZQxdi9B	\N	2026-05-16 14:17:20.543+00	db	\N	\N
 \.
 
 
@@ -455,6 +459,8 @@ COPY "public"."execution_annotation_tags" ("annotationId", "tagId") FROM stdin;
 --
 
 COPY "public"."execution_data" ("executionId", "workflowData", "data", "workflowVersionId") FROM stdin;
+1	{"id":"hOleLeVUsZQxdi9B","name":"My workflow","active":false,"activeVersionId":null,"isArchived":false,"createdAt":"2026-05-16T14:14:08.853Z","updatedAt":"2026-05-16T14:14:08.853Z","nodes":[{"parameters":{"notice":"","rule":{"interval":[{"field":"days","daysInterval":1,"triggerAtHour":0,"triggerAtMinute":0}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[0,0],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"}],"connections":{},"settings":{"executionOrder":"v1","binaryMode":"separate"},"staticData":null,"pinData":{}}	[{"version":1,"startData":"1","resultData":"2","executionData":"3","resumeToken":"4"},{"destinationNode":"5","runNodeFilter":"6"},{"runData":"7","pinData":"8","lastNodeExecuted":"9"},{"contextData":"10","nodeExecutionStack":"11","metadata":"12","waitingExecution":"13","waitingExecutionSource":"14","runtimeData":"15"},"84574bd6b84965281d5d355ef5b767893557182913fff951319efc68f2d7a134",{"nodeName":"9","mode":"16"},["9"],{"Schedule Trigger":"17"},{},"Schedule Trigger",{},[],{},{},{},{"version":1,"establishedAt":1778940878948,"source":"18","redaction":"19","triggerNode":"20"},"inclusive",["21"],"manual",{"version":1,"policy":"22"},{"name":"9","type":"23"},{"startTime":1778940879438,"executionIndex":0,"source":"24","hints":"25","executionTime":8,"executionStatus":"26","data":"27"},"none","n8n-nodes-base.scheduleTrigger",[],[],"success",{"main":"28"},["29"],["30"],{"json":"31","pairedItem":"32"},{"timestamp":"33","Readable date":"34","Readable time":"35","Day of week":"36","Year":"37","Month":"38","Day of month":"39","Hour":"40","Minute":"41","Second":"42","Timezone":"43"},{"item":0},"2026-05-16T10:14:39.442-04:00","May 16th 2026, 10:14:39 am","10:14:39 am","Saturday","2026","May","16","10","14","39","America/New_York (UTC-04:00)"]	d9150ed0-e0e3-4b8f-ba50-6057e6fcef59
+2	{"id":"hOleLeVUsZQxdi9B","name":"My workflow","active":false,"activeVersionId":null,"isArchived":false,"createdAt":"2026-05-16T14:14:08.853Z","updatedAt":"2026-05-16T14:14:21.898Z","nodes":[{"parameters":{"notice":"","rule":{"interval":[{"field":"days","daysInterval":1,"triggerAtHour":0,"triggerAtMinute":0}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[0,0],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"}],"connections":{},"settings":{"executionOrder":"v1","binaryMode":"separate"},"staticData":null,"pinData":{}}	[{"version":1,"startData":"1","resultData":"2","executionData":"3","resumeToken":"4"},{"destinationNode":"5","runNodeFilter":"6"},{"runData":"7","pinData":"8","lastNodeExecuted":"9"},{"contextData":"10","nodeExecutionStack":"11","metadata":"12","waitingExecution":"13","waitingExecutionSource":"14","runtimeData":"15"},"3a7d66cf37da8dc2a8781843a9eb731016c2951a08810552cf0db902b1f0e532",{"nodeName":"9","mode":"16"},["9"],{"Schedule Trigger":"17"},{},"Schedule Trigger",{},[],{},{},{},{"version":1,"establishedAt":1778941042992,"source":"18","redaction":"19","triggerNode":"20"},"inclusive",["21"],"manual",{"version":1,"policy":"22"},{"name":"9","type":"23"},{"startTime":1778941043488,"executionIndex":0,"source":"24","hints":"25","executionTime":2,"executionStatus":"26","data":"27"},"none","n8n-nodes-base.scheduleTrigger",[],[],"success",{"main":"28"},["29"],["30"],{"json":"31","pairedItem":"32"},{"timestamp":"33","Readable date":"34","Readable time":"35","Day of week":"36","Year":"37","Month":"38","Day of month":"39","Hour":"40","Minute":"41","Second":"42","Timezone":"43"},{"item":0},"2026-05-16T10:17:23.489-04:00","May 16th 2026, 10:17:23 am","10:17:23 am","Saturday","2026","May","16","10","17","23","America/New_York (UTC-04:00)"]	d9150ed0-e0e3-4b8f-ba50-6057e6fcef59
 \.
 
 
@@ -577,6 +583,7 @@ COPY "public"."instance_ai_workflow_snapshots" ("runId", "workflowName", "resour
 COPY "public"."instance_version_history" ("id", "major", "minor", "patch", "createdAt") FROM stdin;
 1	2	20	6	2026-05-12 08:42:19.442+00
 2	2	20	7	2026-05-14 09:25:54.275+00
+3	2	20	9	2026-05-16 13:46:53.842+00
 \.
 
 
@@ -1559,6 +1566,7 @@ userManagement.isInstanceOwnerSetUp	true	t
 --
 
 COPY "public"."shared_credentials" ("credentialsId", "projectId", "role", "createdAt", "updatedAt") FROM stdin;
+DIbHcKc43tjLc7zV	16cZ3yZCDsHJmufN	credential:owner	2026-05-16 14:48:31.007+00	2026-05-16 14:48:31.007+00
 \.
 
 
@@ -1567,6 +1575,7 @@ COPY "public"."shared_credentials" ("credentialsId", "projectId", "role", "creat
 --
 
 COPY "public"."shared_workflow" ("workflowId", "projectId", "role", "createdAt", "updatedAt") FROM stdin;
+hOleLeVUsZQxdi9B	16cZ3yZCDsHJmufN	workflow:owner	2026-05-16 14:14:08.853+00	2026-05-16 14:14:08.853+00
 \.
 
 
@@ -1655,6 +1664,9 @@ COPY "public"."workflow_builder_session" ("id", "workflowId", "userId", "message
 --
 
 COPY "public"."workflow_dependency" ("id", "workflowId", "workflowVersionId", "dependencyType", "dependencyKey", "dependencyInfo", "indexVersionId", "createdAt", "publishedVersionId") FROM stdin;
+17	hOleLeVUsZQxdi9B	16	nodeType	n8n-nodes-base.scheduleTrigger	{"nodeId":"c3fbc748-0bbd-419a-a088-e8807d4d1899","nodeVersion":1.3}	1	2026-05-16 15:19:28.131+00	\N
+18	hOleLeVUsZQxdi9B	16	nodeType	n8n-nodes-base.airtable	{"nodeId":"f9e49327-91c3-45e0-8be0-9f72ed50a073","nodeVersion":2.2}	1	2026-05-16 15:19:28.131+00	\N
+19	hOleLeVUsZQxdi9B	16	credentialId	DIbHcKc43tjLc7zV	{"nodeId":"f9e49327-91c3-45e0-8be0-9f72ed50a073","nodeVersion":2.2}	1	2026-05-16 15:19:28.131+00	\N
 \.
 
 
@@ -1663,6 +1675,13 @@ COPY "public"."workflow_dependency" ("id", "workflowId", "workflowVersionId", "d
 --
 
 COPY "public"."workflow_history" ("versionId", "workflowId", "authors", "createdAt", "updatedAt", "nodes", "connections", "name", "autosaved", "description") FROM stdin;
+e7364a51-e473-4f33-b804-951c6fb312d2	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:21:17.031+00	2026-05-16 14:21:17.031+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"}]	{}	\N	t	\N
+e320607a-9799-470e-9263-73e91c2dabec	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:43:23.184+00	2026-05-16 14:43:23.184+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"operation":"create","base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Create a record"}]	{"Schedule Trigger":{"main":[[{"node":"Create a record","type":"main","index":0}]]}}	\N	t	\N
+7099d1eb-cf3c-49c7-a4d1-49681e2e8c86	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:43:29.704+00	2026-05-16 14:43:29.704+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"operation":"create","base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"columns":{"mappingMode":"defineBelow","value":{},"matchingColumns":[],"schema":[],"attemptToConvertTypes":false,"convertFieldsToString":false},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Create a record"}]	{"Schedule Trigger":{"main":[[{"node":"Create a record","type":"main","index":0}]]}}	\N	t	\N
+c079290e-6e24-4ce4-bf89-edb3fdebfe93	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:48:38.4+00	2026-05-16 14:48:38.4+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"operation":"create","base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"columns":{"mappingMode":"defineBelow","value":{},"matchingColumns":[],"schema":[],"attemptToConvertTypes":false,"convertFieldsToString":false},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Create a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Create a record","type":"main","index":0}]]}}	\N	t	\N
+b05496f4-4fd9-4cb8-b731-2bcfed70bb6b	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:49:55.859+00	2026-05-16 14:49:55.859+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"resource":"base","options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get many bases","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get many bases","type":"main","index":0}]]}}	\N	t	\N
+69535361-51b3-493b-9ad9-3a2d4391e31f	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 15:19:06.976+00	2026-05-16 15:19:06.976+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get a record","type":"main","index":0}]]}}	\N	t	\N
+c1aa9a37-dadb-47ac-baa1-59f61fd39136	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 15:19:25.87+00	2026-05-16 15:19:25.87+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"base":{"__rl":true,"value":"appse5c8JbGJUJzeq","mode":"list","cachedResultName":"AI Project Tracker","cachedResultUrl":"https://airtable.com/appse5c8JbGJUJzeq"},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get a record","type":"main","index":0}]]}}	\N	t	\N
 \.
 
 
@@ -1687,6 +1706,7 @@ COPY "public"."workflow_published_version" ("workflowId", "publishedVersionId", 
 --
 
 COPY "public"."workflow_statistics" ("count", "latestEvent", "name", "workflowId", "rootCount", "id", "workflowName") FROM stdin;
+2	2026-05-16 14:17:24.553+00	manual_success	hOleLeVUsZQxdi9B	0	1	My workflow
 \.
 
 
@@ -1786,7 +1806,7 @@ SELECT pg_catalog.setval('"public"."execution_annotations_id_seq"', 1, false);
 -- Name: execution_entity_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."execution_entity_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."execution_entity_id_seq"', 2, true);
 
 
 --
@@ -1821,7 +1841,7 @@ SELECT pg_catalog.setval('"public"."insights_raw_id_seq"', 1, false);
 -- Name: instance_version_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."instance_version_history_id_seq"', 2, true);
+SELECT pg_catalog.setval('"public"."instance_version_history_id_seq"', 3, true);
 
 
 --
@@ -1856,7 +1876,7 @@ SELECT pg_catalog.setval('"public"."user_favorites_id_seq"', 1, false);
 -- Name: workflow_dependency_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."workflow_dependency_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."workflow_dependency_id_seq"', 19, true);
 
 
 --
@@ -1870,13 +1890,13 @@ SELECT pg_catalog.setval('"public"."workflow_publish_history_id_seq"', 1, false)
 -- Name: workflow_statistics_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 2, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict Ko8NWCscn7GCyIQZTlIgTRxE6HLBo1MVpFVLvADz4t2rpx9pKmx2qgoBu3eN3wH
+-- \unrestrict U0IyAKbnBf7oWieVhcbqZtsHs9jAHGbk0XfxklZijT4UWk0OZoE5itAt0g5hesQ
 
 RESET ALL;
