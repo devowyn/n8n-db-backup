@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict U0IyAKbnBf7oWieVhcbqZtsHs9jAHGbk0XfxklZijT4UWk0OZoE5itAt0g5hesQ
+-- \restrict yLe9UdH2W9xSxdtkahN1Qy25EpxaKqykEgKO86pZVf9bKIKREsYdV1fTQfv6kOB
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -225,7 +225,7 @@ secretsProviderConnection:user	Secrets Provider Connection User	Read-only access
 --
 
 COPY "public"."user" ("id", "email", "firstName", "lastName", "password", "personalizationAnswers", "createdAt", "updatedAt", "settings", "disabled", "mfaEnabled", "mfaSecret", "mfaRecoveryCodes", "lastActiveAt", "roleSlug") FROM stdin;
-df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-16 17:53:34.199+00	{"userActivated": false}	f	f	\N	\N	2026-05-16	global:owner
+df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-17 08:15:33.609+00	{"userActivated": false}	f	f	\N	\N	2026-05-17	global:owner
 \.
 
 
@@ -1675,12 +1675,6 @@ COPY "public"."workflow_dependency" ("id", "workflowId", "workflowVersionId", "d
 --
 
 COPY "public"."workflow_history" ("versionId", "workflowId", "authors", "createdAt", "updatedAt", "nodes", "connections", "name", "autosaved", "description") FROM stdin;
-e7364a51-e473-4f33-b804-951c6fb312d2	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:21:17.031+00	2026-05-16 14:21:17.031+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"}]	{}	\N	t	\N
-e320607a-9799-470e-9263-73e91c2dabec	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:43:23.184+00	2026-05-16 14:43:23.184+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"operation":"create","base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Create a record"}]	{"Schedule Trigger":{"main":[[{"node":"Create a record","type":"main","index":0}]]}}	\N	t	\N
-7099d1eb-cf3c-49c7-a4d1-49681e2e8c86	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:43:29.704+00	2026-05-16 14:43:29.704+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"operation":"create","base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"columns":{"mappingMode":"defineBelow","value":{},"matchingColumns":[],"schema":[],"attemptToConvertTypes":false,"convertFieldsToString":false},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Create a record"}]	{"Schedule Trigger":{"main":[[{"node":"Create a record","type":"main","index":0}]]}}	\N	t	\N
-c079290e-6e24-4ce4-bf89-edb3fdebfe93	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:48:38.4+00	2026-05-16 14:48:38.4+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"operation":"create","base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"columns":{"mappingMode":"defineBelow","value":{},"matchingColumns":[],"schema":[],"attemptToConvertTypes":false,"convertFieldsToString":false},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Create a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Create a record","type":"main","index":0}]]}}	\N	t	\N
-b05496f4-4fd9-4cb8-b731-2bcfed70bb6b	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 14:49:55.859+00	2026-05-16 14:49:55.859+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"resource":"base","options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get many bases","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get many bases","type":"main","index":0}]]}}	\N	t	\N
-69535361-51b3-493b-9ad9-3a2d4391e31f	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 15:19:06.976+00	2026-05-16 15:19:06.976+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"base":{"__rl":true,"mode":"list","value":""},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get a record","type":"main","index":0}]]}}	\N	t	\N
 c1aa9a37-dadb-47ac-baa1-59f61fd39136	hOleLeVUsZQxdi9B	Chris Owyn Bulatao	2026-05-16 15:19:25.87+00	2026-05-16 15:19:25.87+00	[{"parameters":{"rule":{"interval":[{}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[-432,-144],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"},{"parameters":{"base":{"__rl":true,"value":"appse5c8JbGJUJzeq","mode":"list","cachedResultName":"AI Project Tracker","cachedResultUrl":"https://airtable.com/appse5c8JbGJUJzeq"},"table":{"__rl":true,"mode":"list","value":""},"options":{}},"type":"n8n-nodes-base.airtable","typeVersion":2.2,"position":[-224,-144],"id":"f9e49327-91c3-45e0-8be0-9f72ed50a073","name":"Get a record","credentials":{"airtableTokenApi":{"id":"DIbHcKc43tjLc7zV","name":"Airtable Personal Access Token account"}}}]	{"Schedule Trigger":{"main":[[{"node":"Get a record","type":"main","index":0}]]}}	\N	t	\N
 \.
 
@@ -1897,6 +1891,6 @@ SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 2, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict U0IyAKbnBf7oWieVhcbqZtsHs9jAHGbk0XfxklZijT4UWk0OZoE5itAt0g5hesQ
+-- \unrestrict yLe9UdH2W9xSxdtkahN1Qy25EpxaKqykEgKO86pZVf9bKIKREsYdV1fTQfv6kOB
 
 RESET ALL;
