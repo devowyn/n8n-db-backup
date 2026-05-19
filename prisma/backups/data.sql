@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict yLe9UdH2W9xSxdtkahN1Qy25EpxaKqykEgKO86pZVf9bKIKREsYdV1fTQfv6kOB
+-- \restrict HPPq6OOuiJW5UXZtoxkTYPVxsZI3rF6GQ7BAjMVlFMuUEg0VgcH9i5o2JDQ0bX0
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -225,7 +225,7 @@ secretsProviderConnection:user	Secrets Provider Connection User	Read-only access
 --
 
 COPY "public"."user" ("id", "email", "firstName", "lastName", "password", "personalizationAnswers", "createdAt", "updatedAt", "settings", "disabled", "mfaEnabled", "mfaSecret", "mfaRecoveryCodes", "lastActiveAt", "roleSlug") FROM stdin;
-df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-17 08:15:33.609+00	{"userActivated": false}	f	f	\N	\N	2026-05-17	global:owner
+df29fbdc-a40c-4632-8e3b-1cca300956cd	bulataokiro@gmail.com	Chris Owyn	Bulatao	$2a$10$/6l6mLmDnaj9kHPvztTTIeQB262F0WxVQxuvfQ3claIzsAHdHUD9e	{"version":"v4","personalization_survey_submitted_at":"2026-05-12T08:52:45.663Z","personalization_survey_n8n_version":"2.20.6","companySize":"<20","companyType":"saas","role":"business-owner","reportedSource":"youtube"}	2026-05-12 08:01:08.586+00	2026-05-19 01:44:09.223+00	{"userActivated": false}	f	f	\N	\N	2026-05-19	global:owner
 \.
 
 
@@ -1891,6 +1891,6 @@ SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 2, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict yLe9UdH2W9xSxdtkahN1Qy25EpxaKqykEgKO86pZVf9bKIKREsYdV1fTQfv6kOB
+-- \unrestrict HPPq6OOuiJW5UXZtoxkTYPVxsZI3rF6GQ7BAjMVlFMuUEg0VgcH9i5o2JDQ0bX0
 
 RESET ALL;
