@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict CjwNhfSdy9bWinqxfJ7yDeX0dgcwDnJRxQYAEl9qKgKyIVC4xlVOO5l3hSnbtxN
+-- \restrict EOavwJFeku4oL0izCDF2dwnoWGWLmDuTdcXLSsYk3ydwoYRhjSn9zfzrvYTHIJY
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -357,8 +357,6 @@ COPY "public"."chat_hub_sessions" ("id", "title", "ownerId", "lastMessageAt", "c
 --
 
 COPY "public"."execution_entity" ("id", "finished", "mode", "retryOf", "retrySuccessId", "startedAt", "stoppedAt", "waitTill", "status", "workflowId", "deletedAt", "createdAt", "storedAt", "tracingContext", "deduplicationKey") FROM stdin;
-1	t	manual	\N	\N	2026-05-16 14:14:27.049+00	2026-05-16 14:14:39.501+00	\N	success	hOleLeVUsZQxdi9B	\N	2026-05-16 14:14:23.842+00	db	\N	\N
-2	t	manual	\N	\N	2026-05-16 14:17:21.359+00	2026-05-16 14:17:23.49+00	\N	success	hOleLeVUsZQxdi9B	\N	2026-05-16 14:17:20.543+00	db	\N	\N
 \.
 
 
@@ -459,8 +457,6 @@ COPY "public"."execution_annotation_tags" ("annotationId", "tagId") FROM stdin;
 --
 
 COPY "public"."execution_data" ("executionId", "workflowData", "data", "workflowVersionId") FROM stdin;
-1	{"id":"hOleLeVUsZQxdi9B","name":"My workflow","active":false,"activeVersionId":null,"isArchived":false,"createdAt":"2026-05-16T14:14:08.853Z","updatedAt":"2026-05-16T14:14:08.853Z","nodes":[{"parameters":{"notice":"","rule":{"interval":[{"field":"days","daysInterval":1,"triggerAtHour":0,"triggerAtMinute":0}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[0,0],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"}],"connections":{},"settings":{"executionOrder":"v1","binaryMode":"separate"},"staticData":null,"pinData":{}}	[{"version":1,"startData":"1","resultData":"2","executionData":"3","resumeToken":"4"},{"destinationNode":"5","runNodeFilter":"6"},{"runData":"7","pinData":"8","lastNodeExecuted":"9"},{"contextData":"10","nodeExecutionStack":"11","metadata":"12","waitingExecution":"13","waitingExecutionSource":"14","runtimeData":"15"},"84574bd6b84965281d5d355ef5b767893557182913fff951319efc68f2d7a134",{"nodeName":"9","mode":"16"},["9"],{"Schedule Trigger":"17"},{},"Schedule Trigger",{},[],{},{},{},{"version":1,"establishedAt":1778940878948,"source":"18","redaction":"19","triggerNode":"20"},"inclusive",["21"],"manual",{"version":1,"policy":"22"},{"name":"9","type":"23"},{"startTime":1778940879438,"executionIndex":0,"source":"24","hints":"25","executionTime":8,"executionStatus":"26","data":"27"},"none","n8n-nodes-base.scheduleTrigger",[],[],"success",{"main":"28"},["29"],["30"],{"json":"31","pairedItem":"32"},{"timestamp":"33","Readable date":"34","Readable time":"35","Day of week":"36","Year":"37","Month":"38","Day of month":"39","Hour":"40","Minute":"41","Second":"42","Timezone":"43"},{"item":0},"2026-05-16T10:14:39.442-04:00","May 16th 2026, 10:14:39 am","10:14:39 am","Saturday","2026","May","16","10","14","39","America/New_York (UTC-04:00)"]	d9150ed0-e0e3-4b8f-ba50-6057e6fcef59
-2	{"id":"hOleLeVUsZQxdi9B","name":"My workflow","active":false,"activeVersionId":null,"isArchived":false,"createdAt":"2026-05-16T14:14:08.853Z","updatedAt":"2026-05-16T14:14:21.898Z","nodes":[{"parameters":{"notice":"","rule":{"interval":[{"field":"days","daysInterval":1,"triggerAtHour":0,"triggerAtMinute":0}]}},"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.3,"position":[0,0],"id":"c3fbc748-0bbd-419a-a088-e8807d4d1899","name":"Schedule Trigger"}],"connections":{},"settings":{"executionOrder":"v1","binaryMode":"separate"},"staticData":null,"pinData":{}}	[{"version":1,"startData":"1","resultData":"2","executionData":"3","resumeToken":"4"},{"destinationNode":"5","runNodeFilter":"6"},{"runData":"7","pinData":"8","lastNodeExecuted":"9"},{"contextData":"10","nodeExecutionStack":"11","metadata":"12","waitingExecution":"13","waitingExecutionSource":"14","runtimeData":"15"},"3a7d66cf37da8dc2a8781843a9eb731016c2951a08810552cf0db902b1f0e532",{"nodeName":"9","mode":"16"},["9"],{"Schedule Trigger":"17"},{},"Schedule Trigger",{},[],{},{},{},{"version":1,"establishedAt":1778941042992,"source":"18","redaction":"19","triggerNode":"20"},"inclusive",["21"],"manual",{"version":1,"policy":"22"},{"name":"9","type":"23"},{"startTime":1778941043488,"executionIndex":0,"source":"24","hints":"25","executionTime":2,"executionStatus":"26","data":"27"},"none","n8n-nodes-base.scheduleTrigger",[],[],"success",{"main":"28"},["29"],["30"],{"json":"31","pairedItem":"32"},{"timestamp":"33","Readable date":"34","Readable time":"35","Day of week":"36","Year":"37","Month":"38","Day of month":"39","Hour":"40","Minute":"41","Second":"42","Timezone":"43"},{"item":0},"2026-05-16T10:17:23.489-04:00","May 16th 2026, 10:17:23 am","10:17:23 am","Saturday","2026","May","16","10","17","23","America/New_York (UTC-04:00)"]	d9150ed0-e0e3-4b8f-ba50-6057e6fcef59
 \.
 
 
@@ -1891,6 +1887,6 @@ SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 2, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict CjwNhfSdy9bWinqxfJ7yDeX0dgcwDnJRxQYAEl9qKgKyIVC4xlVOO5l3hSnbtxN
+-- \unrestrict EOavwJFeku4oL0izCDF2dwnoWGWLmDuTdcXLSsYk3ydwoYRhjSn9zfzrvYTHIJY
 
 RESET ALL;
