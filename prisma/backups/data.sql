@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict M0SAduqhPtaPlbySSPZJB7TLZmsXH2fyZgXFwcWae70aZeQtcbOYt2fyhSgcTQJ
+-- \restrict d28HvgmjUbeBI3SI4nt8xquX1ch0FOXDVtTasRhBsmHVz4ogVD9kjQnFeo2cZtd
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -580,6 +580,7 @@ COPY "public"."instance_version_history" ("id", "major", "minor", "patch", "crea
 1	2	20	6	2026-05-12 08:42:19.442+00
 2	2	20	7	2026-05-14 09:25:54.275+00
 3	2	20	9	2026-05-16 13:46:53.842+00
+4	2	20	7	2026-08-07 03:43:30.456+00
 \.
 
 
@@ -1831,7 +1832,7 @@ SELECT pg_catalog.setval('"public"."insights_raw_id_seq"', 1, false);
 -- Name: instance_version_history_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."instance_version_history_id_seq"', 3, true);
+SELECT pg_catalog.setval('"public"."instance_version_history_id_seq"', 4, true);
 
 
 --
@@ -1887,6 +1888,6 @@ SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 2, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict M0SAduqhPtaPlbySSPZJB7TLZmsXH2fyZgXFwcWae70aZeQtcbOYt2fyhSgcTQJ
+-- \unrestrict d28HvgmjUbeBI3SI4nt8xquX1ch0FOXDVtTasRhBsmHVz4ogVD9kjQnFeo2cZtd
 
 RESET ALL;
